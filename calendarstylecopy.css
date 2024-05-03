@@ -317,7 +317,7 @@ a {
   background: #75b325;
   position: absolute;
   width: 100%;
-  height: auto;
+  height: 100%;
   bottom: 0;
   left: 0;
   display: none; }
