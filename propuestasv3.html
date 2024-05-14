@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siguealburro.com</title>
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <!--Google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+  <!--CSS-->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!--Barra de navegación-->
+  <nav class="navbar navbar-expand-md navbar-sab">
+    <div class="container-fluid">
+      <img id="logosab" src="images/logosab.png" alt="Logo Siguealburro" width="75" height="auto"
+        class="d-inline-block align-text-top">
+      <a class="navbar-brand" href="index.html">
+        <h3>Siguealburro.com</h3>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="quiensomos.html">Quienes somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Este domingo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="proximasrutas.html">Próximas rutas</a>
+          </li>
+          <a class="nav-link active" aria-current="page" href="rutasrealizadas.html">Rutas realizadas</a>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="propuestas.html">Propuestas</a>
+          </li>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="Container">
+    <h1 class="titulo-sab">Proponer nuevas rutas</h1>
+  </div>
+
+  <section class="container p-2 mb-2 rounded" style="background-color: #e6e6e6;">
+      <!--div class="row">
+		  <div Class="col-sm-6 col-md-3">
+		            <img src="images/icono_aniadir.png" alt="Añadir propuesta">  
+          </div>
+          <div Class="col-sm-6 col-md-2">
+          <h5>28/07/2024</h5>
+          </div>
+          <div Class="col-sm-12 col-md-7">
+          <h5></h5> 
+          </div>
+        </div-->
+      <form enctype="multipart/form-data" action="aniadirp.php" method="post">
+        <input type="hidden" name="fecha" value="2024-07-28">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-3 align-self-center text-center btn btn-danger">
+              <h5>28/07/2024</h5>
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="row">
+                <div Class="col-12 col-md-6 p-1">
+                  <input class="form-control" type="edit" name="salida" placeholder="RUTA*" minlength="1" maxlength="100" required>
+                </div>
+                <div Class="col-12 col-md-3 p-1">
+                  <input class="form-control" type="edit" name="promotor" placeholder="PROMOTOR*" minlength="1" maxlength="30" required>
+                </div>
+                <div Class="col-12 col-md-3 p-1">
+                  <input class="form-control" type="edit" name="lugar" placeholder="LUGAR SALIDA*" minlength="1" maxlength="30" required>
+                </div>
+                <div Class="col-8 col-md-3 p-1">
+                  <input class="form-control" type="edit" name="provincia" placeholder="PROVINCIA*" minlength="1" maxlength="15" required>
+                </div>
+                <div Class="col-4 col-md-2 p-1">
+                  <select name="dificultad" class="form-select" required>
+                    <option selected value="F">DIFICULTAD...</option>
+                    <option value="F">F</option>
+                    <option value="M">M</option>
+                    <option value="D">D</option>
+                  </select>
+                </div>
+                <div Class="col-5 col-md-2 p-1">
+                  <input class="form-control" type="edit" name="duracion" placeholder="DURACIÓN* (p.e. 4h30)" minlength="1" maxlength="10" required>
+                </div>
+                <div Class="col-3 col-md-3 p-1">
+                  <input class="form-control" type="edit" name="distancia" placeholder="DISTANCIA* (kms)" minlength="1" maxlength="6" required>
+                </div>
+                <div Class="col-4 col-md-2 p-1">
+                  <input class="form-control" type="edit" name="desnivel" placeholder="DESNIVEL* (mts)" minlength="1" maxlength="6" required>
+                </div>
+                <div Class="col-12 col-md-12 p-1">
+                  <input class="form-control" type="edit" name="url" placeholder="URL">
+                </div>
+                <div Class="col-12 col-md-12 text-center p-1">
+                  <input class="btn mt-1" type="button" value="Añadir propuesta" id="añadir-button" style="background-color:#46e5f759;">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <!--div class="row">
+         <div Class="col-sm-6 col-md-3">
+          Promotor: 
+          </div>
+          <div Class="col-sm-6 col-md-7">
+          Lugar de salida: &nbsp; ()
+          </div>
+          <div Class="col-sm-12 col-md-2">
+            Web externa: <a href="" target="_blank"><img src="images/world_link.png" alt="Web externa de la ruta"></a>
+            </div>
+        </div>
+        <div class="row">
+          <div Class="col-sm-6 col-md-3">
+          Distancia: &nbsp;kms
+          </div>
+          <div Class="col-sm-6 col-md-3">
+          Tiempo: 
+          </div>
+          <div Class="col-sm-12 col-md-6">
+          Desnivel: &nbsp;mts
+          </div>
+		</div-->
+  </section>
+
+  <section class="container p-2 mb-2 rounded" style="background-color:#46e5f759;">
+    <div class="container">
+      <div class="row">
+        <div Class="col-sm-6 col-md-3">
+          <img src="images/icono_facil2.jpg" alt="dificultad">
+        </div>
+        <div Class="col-sm-6 col-md-2">
+          <h5>07/07/2024</h5>
+        </div>
+        <div Class="col-sm-12 col-md-7">
+          <h5>Embalse de Artiba - Arrabatxu - Ganeko - Embalse de Artiba</h5>
+        </div>
+      </div>
+      <div class="row">
+        <div Class="col-sm-6 col-md-3">
+          Promotor: Jorge A
+        </div>
+        <div Class="col-sm-6 col-md-7">
+          Lugar de salida: Bilbao&nbsp; (Bizkaia)
+        </div>
+        <div Class="col-sm-12 col-md-2">
+          Web externa: <a
+            href="https://es.wikiloc.com/rutas-senderismo/embalse-de-artiba-arrabatxu-ganeko-embalse-de-artiba-61049224"
+            target="_blank"><img src="images/world_link.png" alt="Web externa de la ruta"></a>
+        </div>
+      </div>
+      <div class="row">
+        <div Class="col-sm-6 col-md-3">
+          Distancia: 12,5&nbsp;kms
+        </div>
+        <div Class="col-sm-6 col-md-3">
+          Tiempo: 3h30m
+        </div>
+        <div Class="col-sm-12 col-md-6">
+          Desnivel: 710&nbsp;mts
+        </div>
+    </div>
+  </section>
+
+
+  <footer class="d-flex flex-row aling-items-center justify-content-center">
+    <img src="images/faviconw.png" alt="icono logo SAB">
+    <div class="text-center">Siguealburro.com desde 2004<br> Diseño web 2024</div>
+  </footer>
+</body>
+
+</html>
